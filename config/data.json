@@ -1,0 +1,24 @@
+{
+  author: 'alvin',
+  serverList: [
+    {
+      ip: '192.168.1.111',
+      port: 22,
+      user: 'root',
+      password: '123456',
+      title: '测试服务器',
+      apps: [
+        {
+          name: '关闭防火墙',
+          laucnDir: '/root',
+          cmd: 'iptables -F & iptables -X & iptables -Z & iptables-save'
+        },
+        {
+          name: 'eureka 发现服务',
+          laucnDir: '/mnt/project/test-eureka',
+          cmd: 'java -jar test-eureka.jar && logout'
+        } 
+      ]
+    }
+  ]
+}
